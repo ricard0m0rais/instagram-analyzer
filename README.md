@@ -245,10 +245,10 @@
 <body>
 
   <div class="hero">
-    <h1>Quem não te segue de volta?</h1>
-    <p>Descobre quem não te segue de volta no Instagram. 100% privado — os teus dados nunca saem do teu browser.</p>
+    <h1>Who doesn't follow you back?</h1>
+    <p>Find out who isn't following you back on Instagram. Without giving out passwords or taking any risks.</p>
     <div class="privacy-badge">
-      <span>🔒</span> Processado localmente, sem servidores
+      <span>🔒</span> Processed locally, without servers.
     </div>
   </div>
 
@@ -256,7 +256,7 @@
 
     <!-- VÍDEO -->
     <div class="video-section">
-      <h2>📹 Como exportar os teus dados do Instagram</h2>
+      <h2>📹 How to export your Instagram data</h2>
       <div class="video-wrapper">
         <!-- OPÇÃO B: Vídeo próprio (mp4) — descomenta e apaga o iframe acima
         <video controls>
@@ -297,7 +297,7 @@
     </div>
 
     <button class="btn-analyze" id="btn-analyze" onclick="analyze()" disabled>
-      🔍 Analisar
+      🔍 Analyzing
     </button>
 
     <!-- RESULTADOS -->
