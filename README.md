@@ -73,7 +73,7 @@
       background: #111;
       border: 1px solid #222;
     }
-    .video-wrapper <file:///C:/Users/ricar/Downloads/BEM%20VINDO!.mp4>,
+    .video-wrapper <iframe>,
     .video-wrapper video {
       position: absolute;
       top: 0; left: 0;
@@ -258,11 +258,11 @@
     <div class="video-section">
       <h2>📹 How to export your Instagram data</h2>
       <div class="video-wrapper">
-        <!-- OPÇÃO B: Vídeo próprio (mp4) — descomenta e apaga o iframe acima
         <video controls>
-          <source src="tutorial.mp4" type="video/mp4">
+          <source src="bemvindo.mp4" type="video/mp4">
         </video>
-        -->
+      </div>
+    </div>
 
       </div>
     </div>
