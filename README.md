@@ -1,5 +1,5 @@
 # instagram-analyzer
-<!DOCTYPE html>
+<Instagram-Analyzer>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
