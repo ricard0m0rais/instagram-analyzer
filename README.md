@@ -66,19 +66,15 @@
       color: #f0f0f0;
     }
     .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
       border-radius: 16px;
       overflow: hidden;
       background: #111;
       border: 1px solid #222;
     }
-    .video-wrapper <iframe>,
     .video-wrapper video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     /* UPLOAD */
