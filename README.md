@@ -1,5 +1,4 @@
-# instagram-analyzer
-<Instagram-Analyzer>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
@@ -55,7 +54,6 @@
       padding: 0 20px 60px;
     }
 
-    /* VÍDEO */
     .video-section {
       margin-bottom: 40px;
     }
@@ -77,7 +75,6 @@
       display: block;
     }
 
-    /* UPLOAD */
     .upload-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -129,7 +126,6 @@
     .dot-ok { background: #4caf50 !important; }
     .dot-err { background: #e53935 !important; }
 
-    /* BOTÃO */
     .btn-analyze {
       width: 100%;
       padding: 14px;
@@ -150,7 +146,6 @@
     .btn-analyze:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-analyze:not(:disabled):active { transform: translateY(0); }
 
-    /* RESULTADOS */
     #results { display: none; }
 
     .stats {
@@ -260,9 +255,6 @@
       </div>
     </div>
 
-      </div>
-    </div>
-
     <!-- UPLOAD -->
     <div class="upload-section">
       <div>
@@ -293,7 +285,7 @@
     </div>
 
     <button class="btn-analyze" id="btn-analyze" onclick="analyze()" disabled>
-      🔍 Analyzing
+      🔍 Analyze
     </button>
 
     <!-- RESULTADOS -->
@@ -301,24 +293,24 @@
       <div class="stats">
         <div class="stat-card">
           <div class="num" id="stat-following">0</div>
-          <div class="lbl">Segues</div>
+          <div class="lbl">Following</div>
         </div>
         <div class="stat-card">
           <div class="num" id="stat-followers">0</div>
-          <div class="lbl">Seguidores</div>
+          <div class="lbl">Followers</div>
         </div>
         <div class="stat-card">
           <div class="num red" id="stat-nf">0</div>
-          <div class="lbl">Não seguem de volta</div>
+          <div class="lbl">Not following back</div>
         </div>
       </div>
 
       <div class="results-card">
-        <h3>❌ Não seguem de volta</h3>
+        <h3>❌ Not following back</h3>
         <input class="search-input" type="text" id="search"
-               placeholder="Pesquisar por username…" oninput="renderList()">
+               placeholder="Search by username…" oninput="renderList()">
         <div class="user-list" id="list-container"></div>
-        <p class="footer-note">Clica no username para abrir o perfil no Instagram</p>
+        <p class="footer-note">Click on a username to open their Instagram profile</p>
       </div>
     </div>
 
@@ -384,17 +376,17 @@
             const full = extractFull(parsed);
 
             if (usernames.size === 0) {
-              setStatus(statusId, 'err', '0 entradas — verifica o ficheiro');
+              setStatus(statusId, 'err', '0 entries — please check the file');
               return;
             }
 
             if (key === 'followers') followersSet = usernames;
             else followingList = full;
 
-            setStatus(statusId, 'ok', `${file.name} — ${usernames.size} entradas`);
+            setStatus(statusId, 'ok', `${file.name} — ${usernames.size} entries`);
             checkReady();
           } catch (err) {
-            setStatus(statusId, 'err', 'Erro ao ler ficheiro');
+            setStatus(statusId, 'err', 'Error reading file');
           }
         };
         reader.readAsText(file);
@@ -434,7 +426,7 @@
       const container = document.getElementById('list-container');
 
       if (list.length === 0) {
-        container.innerHTML = '<p style="text-align:center; color:#555; padding: 20px 0;">Nenhum resultado.</p>';
+        container.innerHTML = '<p style="text-align:center; color:#555; padding: 20px 0;">No results.</p>';
         return;
       }
 
@@ -444,7 +436,7 @@
             <div class="avatar">${u[0].toUpperCase()}</div>
             <a class="ig-link" href="https://instagram.com/${u}" target="_blank" rel="noopener">@${u}</a>
           </div>
-          <span class="badge">não segue</span>
+          <span class="badge">not following</span>
         </div>
       `).join('');
     }
